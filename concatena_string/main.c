@@ -1,35 +1,40 @@
+/*
+Implementando algoritmos do livro "Estruturas de Dados Usando C - Tenembaum"
+Autor: Renato de Pierri
+Concatenando string - figura 1.1.3
+*/
 #include <stdio.h>
 #include <stdlib.h>
-movimenta(char origem[],char destino[],int *controle);
+void movimenta(char origem[],char destino[],int *posicao_destino);
 
 int main()
 {
-    int i=0;
-    int val=1;
-    char c1[]="5Hello";
-    char c2[]="9Everybody";
-    char c3[16];
-    movimenta (c1,c3,&i);
-    i=i+1;
-    movimenta (c2,c3,&i);
-    c3[0]=i;
-    printf("%s\n%s\n",c1,c2);
-    printf("%d",c3[0]);
-    while (c3[val]!='\0'){
-        printf ("%c",c3[val]);
-        val++;
+    int posicao=0;
+    int indice=1;
+    char palavra_1[]="5Hello";
+    char palavra_2[]="9Everybody";
+    char concatenado[16];
+    movimenta (palavra_1,concatenado,&posicao);
+    posicao++;
+    movimenta (palavra_2,concatenado,&posicao);
+    concatenado[0]=posicao;
+
+    printf("%s\n%s\n%d",palavra_1,palavra_2,concatenado[0]);
+    while (concatenado[indice]!='\0'){
+        printf ("%c",concatenado[indice]);
+        indice++;
     }
 
     return 0;
 }
 
-movimenta(char origem[],char destino[],int *controle){
-    int x = 0;
-    if ((*controle)>1){x++;}
-    while (origem[x] != '\0'){
-        destino[(*controle)] = origem[x];
-        (*controle)++;
-        x++;
+void movimenta(char origem[],char destino[],int *posicao_destino){
+    int indice_origem = 0;
+    if ((*posicao_destino)>=1){indice_origem++;}
+    while (origem[indice_origem] != '\0'){
+        destino[(*posicao_destino)] = origem[indice_origem];
+        (*posicao_destino)++;
+        indice_origem++;
     }
-    (*controle)--;
+    (*posicao_destino)--;
 }

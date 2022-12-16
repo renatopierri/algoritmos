@@ -1,7 +1,7 @@
 /*
-Implementando algoritmos do livro "Estruturas de Dados Usando C - Tenembaum"
-Autor: Renato de Pierri
-Concatenando string - figura 1.1.3
+Implementando os algoritmos do livro "Estruturas de Dados Usando C - Tenembaum"
+Autor da implementacao: Renato de Pierri
+Concatenando duas strings - figura 1.1.3
 */
 #include <stdio.h>
 #include <stdlib.h>

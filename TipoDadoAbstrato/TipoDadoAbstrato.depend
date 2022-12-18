@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1671373510 source:c:\users\renat\onedrive\documentos\github\algoritmos\tipodadoabstrato\tipodadoabstrato\tda.c
+	<stdio.h>
+	<stdlib.h>
+	"tda.h"
+
+1671373467 source:c:\users\renat\onedrive\documentos\github\algoritmos\tipodadoabstrato\tipodadoabstrato\main.c
+	<stdio.h>
+	"tda.h"
+
+1671373510 c:\users\renat\onedrive\documentos\github\algoritmos\tipodadoabstrato\tipodadoabstrato\tda.h
+	<stdio.h>
+	<stdlib.h>
+
+1671320417 c:\users\renat\onedrive\documentos\github\algoritmos\tipodadoabstrato\tipodadoabstrato\tda.c
+	<stdio.h>
+	<stdlib.h>
+	"tda.h"
+

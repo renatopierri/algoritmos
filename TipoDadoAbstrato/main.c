@@ -1,23 +1,11 @@
 #include <stdio.h>
 #include "tda.h"
 
-
-
 int main() {
-int tamanho_obj,id_caixa;
+    int tamanho_obj,id_caixa;
+    define_caixa caixa;
 
-//td sbruble;
-//
-//sbruble.id =5;
-//
-//obj_setid(&sbruble, 88);
-//y = obj_getid(&sbruble);
-//x= obj_size();
-//
-//printf("%d %d", x,y);
-define_caixa caixa;
-
-    configura_tipo_caixa(&caixa,"madeiras");
+    configura_tipo_caixa(&caixa,"madeira");
     configura_tamanho_caixa(&caixa,12);
     configura_largura_caixa(&caixa,17.4);
     configura_altura_caixa(&caixa,7.2);
@@ -38,10 +26,6 @@ define_caixa caixa;
         caixa.altura,
         id_caixa,
         tamanho_obj
-
     );
    return 0;
 }
-
-
-

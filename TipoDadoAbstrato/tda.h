@@ -18,5 +18,6 @@ extern void configura_largura_caixa(struct Caixa *,float);
 extern void configura_altura_caixa(struct Caixa *,float);
 extern int obj_getid(struct Caixa *);
 extern void imprime_caixa(struct Caixa *);
+extern void imprime_id_caixa(struct Caixa *);
 
 #endif // TDA_H_INCLUDED

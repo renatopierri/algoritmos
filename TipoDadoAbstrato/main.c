@@ -39,5 +39,8 @@ int main() {
 //        tamanho_obj
 //    );
 
+//Liberando memoria
+    destroi_caixa(&caixa);
+
     return 0;
 }

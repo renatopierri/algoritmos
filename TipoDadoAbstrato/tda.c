@@ -21,8 +21,8 @@ tipo_caixa Caixa_new(void){
     return caixa;
 }
 
-void Caixa_free(tipo_caixa caixa){
-    free(caixa);
+void destroi_caixa(struct Caixa *o){
+    free(o);
 }
 
 //Implementacao das operacoes permitidas para o tipo_caixa

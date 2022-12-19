@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1671417769 source:c:\users\renat\onedrive\documentos\github\algoritmos\tipodado\main.c
+1671492822 source:c:\users\renat\onedrive\documentos\github\algoritmos\tipodado\main.c
 	<stdio.h>
 	"tda.h"
 
-1671455141 c:\users\renat\onedrive\documentos\github\algoritmos\tipodado\tda.h
+1671493357 c:\users\renat\onedrive\documentos\github\algoritmos\tipodado\tda.h
 	<stdio.h>
 	<stdlib.h>
 
-1671417624 source:c:\users\renat\onedrive\documentos\github\algoritmos\tipodado\tda.c
+1671493345 source:c:\users\renat\onedrive\documentos\github\algoritmos\tipodado\tda.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

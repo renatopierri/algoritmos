@@ -4,7 +4,7 @@
 int main()
 {
 
-    struct caixa{
+    struct Caixa{
         char tipo[10];
         float tamanho;
         float largura;
@@ -14,6 +14,7 @@ int main()
     caixa.tamanho = 10.0;
     caixa.largura = 12.5;
     caixa.altura = 7;
+
 
     printf(
         "Tipo de caixa: %s.\n"

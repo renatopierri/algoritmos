@@ -3,9 +3,9 @@
 #include <string.h>
 #include <windows.h>
 
-//Escreva funções em C, add, subtract e multiply, que leiam duas strings
-//de Os e ls representando inteiros não-negativos binários, e imprima a
-//string representando a soma, a diferença e o produto, respectivamente.
+//Escreva funcoes em C, add, subtract e multiply, que leiam duas strings
+//de Os e ls representando inteiros nao-negativos binarios, e imprima a
+//string representando a soma, a diferenca e o produto, respectivamente.
 
 void soma(char v1[], char v2[], char soma_res[]);
 void subtrai(char v1[], char v2[], char sub_res[]);
@@ -38,7 +38,6 @@ int main()
 
     return 0;
 }
-
 
 int le_dado(char word[]){
     int controle, check, tamanho_string,varre;
@@ -79,8 +78,8 @@ void soma(char v1[], char v2[], char soma_res[]){
 int controle = 0;
 static char vai_um = '0';
     soma_res[0]='0';
+//Mandrakaria ativar! - Logica booleana da soma e logica booleana do vai um:
     for (controle = 7; controle >= 0; controle--){
-
         soma_res[controle+1] = (invert(v1[controle])&invert(v2[controle])&vai_um)|
                                (invert(v1[controle])&v2[controle]&invert(vai_um))|
                                (v1[controle]&invert(v2[controle])&invert(vai_um))|
@@ -100,6 +99,8 @@ static char vai_um = '0';
                7-controle, v1[controle],
                v2[controle],soma_res[controle+1]);
     }
+//Mandrakaria desativar!
+//Imprimindo o resultado da soma binaria:
     printf("overflow:     %c\n", soma_res[0]);
     printf("Resultado = %s\n",soma_res);
 return;

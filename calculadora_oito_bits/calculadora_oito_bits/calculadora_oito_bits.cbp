@@ -32,6 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-g" />
 		</Compiler>
+		<Unit filename="calc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="calc.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

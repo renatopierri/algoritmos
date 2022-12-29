@@ -1,7 +1,17 @@
 # depslib dependency file v1.0
-1671671132 source:c:\users\renat\onedrive\documentos\github\algoritmos\calculadora_oito_bits\calculadora_oito_bits\main.c
+1672347954 source:c:\users\renat\onedrive\documentos\github\algoritmos\calculadora_oito_bits\calculadora_oito_bits\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<windows.h>
+	"calc.h"
+
+1672348662 c:\users\renat\onedrive\documentos\github\algoritmos\calculadora_oito_bits\calculadora_oito_bits\calc.h
+
+1672348662 source:c:\users\renat\onedrive\documentos\github\algoritmos\calculadora_oito_bits\calculadora_oito_bits\calc.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+	"calc.h"
 

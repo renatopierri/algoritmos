@@ -143,20 +143,25 @@ return bit;
 
 //controle de erro. Precisa implementar
 
-//int verifica_erro(char res[]){
-//    int erro = 1;
-//    char res_0 = res[0];
-//    char res_1 = res[1];
-//    char i_res_0 = invert(res[0]);
-//    char i_res_1 = invert(res[1]);
-//
-//    if((i_res_0&i_res_1)|(res_0&res_1)){
-//        erro = 0;
-//        }else{
-//        erro=1;
-//    }
-//return erro;
-//}
+int verifica_erro(char res[]){
+    int erro = 1;
+    char res_0 = res[0];
+    char res_1 = res[1];
+    char i_res_0 = invert(res[0]);
+    char i_res_1 = invert(res[1]);
+
+    res_0 = res_0&'\01';
+    res_1 = res_1&'\01';
+    i_res_0 = i_res_0&'\01';
+    i_res_1 = i_res_1&'\01';
+
+    if((i_res_0&i_res_1)|(res_0&res_1)){
+        erro = 0;
+        }else{
+        erro=1;
+    }
+return erro;
+}
 
 //Verifica se e zero. Precisa implementar
 //int verifica_zero(char res[]){

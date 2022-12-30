@@ -15,6 +15,7 @@
 
 int le_dado();
 int le_dado(char word[]);
+int eerro;
 
 int main()
 {while(1){
@@ -41,18 +42,27 @@ int main()
     printf("Resultados validos entre -128 ate +127 - 10000000 ate 01111111\n\n");
     strcpy(soma_resultado,soma(valor_1, valor_2));
     printf ("Operacao de soma\n");
-    printf("Resultado     = %s\n",
-           &(soma_resultado[strlen (soma_resultado)-8]));
+//    printf("Resultado     = %s\n",
+//           &(soma_resultado[strlen (soma_resultado)-8]));
+    printf("Resultado     = %s\n", soma_resultado);
+    eerro = verifica_erro(soma_resultado);
+    printf("erro: %d\n\n",eerro);
 
     printf("Operacao de subtracao\n");
     strcpy (sub_resultado, subtrai(valor_1, valor_2));
-    printf ("Resultado     = %s\n",
-            &(sub_resultado[strlen (sub_resultado) - 8]));
+//    printf ("Resultado     = %s\n",
+//            &(sub_resultado[strlen (sub_resultado) - 8]));
+    printf ("Resultado     = %s\n",sub_resultado);
+    eerro = verifica_erro(sub_resultado);
+    printf("erro: %d\n\n",eerro);
 
     printf("Operacao de multiplicacao\n");
     strcpy(mult_resultado, multiplica(valor_1, valor_2));
-    printf ("Multiplicacao = %s\n\n",
-           &(mult_resultado[strlen (mult_resultado)-8]));
+//    printf ("Multiplicacao = %s\n\n",
+//           &(mult_resultado[strlen (mult_resultado)-8]));
+    printf ("Multiplicacao = %s\n",mult_resultado);
+    eerro = verifica_erro(soma_resultado);
+    printf("erro: %d\n\n",eerro);
 
     system("pause");
     system("cls");}

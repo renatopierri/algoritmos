@@ -8,7 +8,7 @@ const char * compl_2(char comp_2[]);
 char * subtrai(char valor_1[], char valor_2[]);
 char * multiplica(char valor_1[], char valor_2[]);
 char invert(char bit);
-//int verifica_erro(char res[]); Precisa implementar
+int verifica_erro(char res[]); //Precisa implementar
 //int verifica_zero(char res[]); Precisa implementar
 
 #endif // CALC_H_INCLUDED

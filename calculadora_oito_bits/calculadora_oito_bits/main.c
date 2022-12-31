@@ -4,6 +4,16 @@
 #include <windows.h>
 #include "calc.h"
 
+/*
+    ESTE CODIGO ESTA BUGADO, COM ERRO NO MODULO DE SUBTRACAO
+    ESTOU RESOLVENDO O BUG. SE VC CONSEGUIR ARRUMAR, ME AVISE
+    ESTA ERRANDO NO CALCULO DO BIT DE OVERFLOW (VAI UM) EM ALGUMAS
+    SUBTRACOES. POR EXEMPLO: QUANDO SUBTRAI 1 DE 127 DA ERRO.
+    00000001 MENOS 01111111
+    RESULTADO ESPERADO:   110000010
+    RESULTADO ENCONTRADO: 010000010
+*/
+
 //Tenenbaum 1.1.5
 //Escreva funcoes em C, add, subtract e multiply, que leiam duas strings
 //de Os e ls representando inteiros nao-negativos binarios, e imprima a

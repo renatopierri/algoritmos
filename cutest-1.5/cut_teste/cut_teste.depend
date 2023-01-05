@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1672625239 source:c:\users\renat\onedrive\documentos\github\algoritmos\cutest-1.5\cut_teste\alltests.c
+	<stdio.h>
+	"CuTest.h"
+
+1672625240 c:\users\renat\onedrive\documentos\github\algoritmos\cutest-1.5\cut_teste\cutest.h
+	<setjmp.h>
+	<stdarg.h>
+
+1672625240 source:c:\users\renat\onedrive\documentos\github\algoritmos\cutest-1.5\cut_teste\cutest.c
+	<assert.h>
+	<setjmp.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<math.h>
+	"CuTest.h"
+
+1672625240 source:c:\users\renat\onedrive\documentos\github\algoritmos\cutest-1.5\cut_teste\cutesttest.c
+	<assert.h>
+	<setjmp.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"CuTest.h"
+

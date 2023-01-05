@@ -4,6 +4,8 @@
 #include <windows.h>
 #include "calc.h"
 
+
+
 int le_dado(char word[]){
     int controle, check, tamanho_string,varre;
     check = 0;
@@ -11,7 +13,7 @@ int le_dado(char word[]){
     scanf("%8s",word);
     fflush(stdin);
 
-//Verifica se tem "um" e "zeros"
+//Verifica se tem apenas "um" e "zeros"
     tamanho_string = strlen(word);
     while (controle < tamanho_string){
         if (word[controle]== '0'||word[controle] == '1'){
@@ -25,7 +27,7 @@ int le_dado(char word[]){
 
 //Alinhando a direita
     tamanho_string--;
-    for(varre = 7; varre >=0; varre--){
+    for(varre = 8; varre >=0; varre--){
         if(tamanho_string >= 0){
             word[varre] = word[tamanho_string];
             tamanho_string --;
@@ -33,25 +35,27 @@ int le_dado(char word[]){
             word[varre] = '0';
         }
     }
-    word[8]='\0';
-
-    printf("string: %s\n", word);
+    word[9]='\0';
+    if (word[1]=='1'){word[0]='1';}
+    printf("string completa: %s\n", word);
     return check;
 }
 
 //void soma(char valor_1[], char valor_2[], char soma_res[]){
 char* soma(char valor_1[], char valor_2[]){
 int controle = 0;
-char v1[9],v2[9];
+char v1[11],v2[11];
 static char vai_um = '0';
-static char soma_res[10];
+static char soma_res[11];
 soma_res[0]='0';
-strcpy (v1, valor_1);
-strcpy (v2, valor_2);
+completa(v1, valor_1);
+completa(v2, valor_2);
+
+
 
 //Mandrakaria ativar! - Implementação do somador de oito bits com overflow:
-    for (controle = 7; controle >= 0; controle--){
-        soma_res[controle+1] = (invert(v1[controle])&invert(v2[controle])&vai_um)|
+    for (controle = 9 ; controle >= 0; controle--){
+        soma_res[controle] = (invert(v1[controle])&invert(v2[controle])&vai_um)|
                                (invert(v1[controle])&v2[controle]&invert(vai_um))|
                                (v1[controle]&invert(v2[controle])&invert(vai_um))|
                                (v1[controle]&v2[controle]&vai_um);
@@ -59,46 +63,54 @@ strcpy (v2, valor_2);
             (v1[controle]&vai_um)|
             (v1[controle]&v2[controle]))=='1'){
             vai_um = '1';
-
-            if(controle == 0){
-               soma_res[0] = '1';
-            }
         }else{
             vai_um = '0';
         }
     }
     vai_um = '0';
 //Mandrakaria desativar!
-//Retornando o resultado da soma binaria:
+
  return soma_res;
 }
 
 const char * compl_1(char v2[]){
     int varre;
-    static char comp_1[9];
-    for(varre = 7; varre >=0; varre--){
+    static char comp_1[11];
+    for(varre = 9; varre >=0; varre--){
         comp_1[varre] = invert(v2[varre]);
     }
 return comp_1;
 }
 
 const char * compl_2(char comp_1[]){
-    static char comp_2[9];
-     strcpy(comp_2,soma("00000001",comp_1));
+    static char comp_2[11];
+    char *c1 = comp_1+2;
+     strcpy(comp_2,soma("00000001",c1));
+     comp_2[11]='\0';
 return comp_2;
 }
 
+/*
+   1-+127
+    00000001 MENOS 01111111
+    RESULTADO ESPERADO:   110000010
+    RESULTADO ENCONTRADO: 010000010
+*/
+
 char * subtrai(char valor_1[], char valor_2[]){
-    char v1[9],v2[9];
-    char complemento_1[9], complemento_2[9];
-    static char sub_res[10];
+    char v1[11],v2[11];
+    static char complemento_1[11], complemento_2[11];
+    static char sub_res[11];
+    completa(v1, valor_1);
+    completa(v2, valor_2);
     sub_res[0]='0';
-    strcpy (v1, valor_1);
-    strcpy (v2, valor_2);
     strcpy (complemento_1, compl_1(v2));
-    strcpy (sub_res, compl_2(complemento_1));
-    memcpy(complemento_2,&sub_res[1],9);
-    strcpy (sub_res, soma(v1,complemento_2));
+    strcpy (complemento_2, compl_2(complemento_1));
+char *ve1 = v1+2;
+char *c2 = complemento_2+2;
+    strcpy (sub_res, soma(ve1,c2));
+   // strcpy (sub_res, soma(v1,complemento_2));
+
  return sub_res;
 }
 
@@ -145,24 +157,54 @@ return bit;
 
 int verifica_erro(char res[]){
     int erro = 1;
-    char res_0 = res[0];
-    char res_1 = res[1];
-    char i_res_0 = invert(res[0]);
-    char i_res_1 = invert(res[1]);
+    char res_0 = res[1];
+    char res_1 = res[2];
+    char i_res_0 = invert(res[1]);
+    char i_res_1 = invert(res[2]);
 
-    res_0 = res_0&'\01';
-    res_1 = res_1&'\01';
-    i_res_0 = i_res_0&'\01';
-    i_res_1 = i_res_1&'\01';
-
-    if((i_res_0&i_res_1)|(res_0&res_1)){
-        erro = 0;
+    if(((i_res_0&res_1)|(res_0&i_res_1))=='1'){
+        erro = 1;
         }else{
-        erro=1;
+        erro=0;
     }
 return erro;
 }
 
+
+void completa(char saida[],char entrada[] ){
+    if (entrada[0] == '1'){
+        saida[0] = '1';
+        saida[1] = '1';
+    }else{
+        saida[0]='0';
+        saida[1]='0';
+    }
+    int controle = 2;
+    while (controle <= 10){
+        saida[controle] = entrada[controle -2];
+        controle++;
+    }
+    saida[10]='\0';
+
+}
+
+void encurta(char word[]){
+    int tamanho_string = 8;
+    int varre;
+//Alinhando a direita
+    tamanho_string--;
+    for(varre = 10; varre >=0; varre--){
+        if(tamanho_string >= 0){
+            word[varre] = word[tamanho_string];
+            tamanho_string --;
+        }else{
+            word[varre] = '0';
+        }
+    }
+    word[9]='\0';
+    if (word[1]=='1'){word[0]='1';}
+    return;
+}
 //Verifica se e zero. Precisa implementar
 //int verifica_zero(char res[]){
 //    int ezero = 0;

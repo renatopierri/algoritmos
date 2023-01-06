@@ -32,13 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-g" />
 		</Compiler>
-		<Unit filename="AllTests.c">
+		<Unit filename="Teste_unitario/CuTest.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="Arquivos_adicionais/CuTest.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Arquivos_adicionais/CuTest.h" />
+		<Unit filename="Teste_unitario/CuTest.h" />
 		<Unit filename="calc.c">
 			<Option compilerVar="CC" />
 		</Unit>

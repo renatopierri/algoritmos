@@ -1,15 +1,15 @@
 # depslib dependency file v1.0
-1672942801 source:c:\users\renat\onedrive\documentos\github\algoritmos\calculadora_oito_bits\calculadora_oito_bits\main.c
+1673010085 source:c:\users\renat\onedrive\documentos\github\algoritmos\calculadora_oito_bits\calculadora_oito_bits\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<windows.h>
 	"calc.h"
-	"Arquivos_adicionais/CuTest.h"
+	"Teste_unitario/CuTest.h"
 
-1672425815 c:\users\renat\onedrive\documentos\github\algoritmos\calculadora_oito_bits\calculadora_oito_bits\calc.h
+1673010001 c:\users\renat\onedrive\documentos\github\algoritmos\calculadora_oito_bits\calculadora_oito_bits\calc.h
 
-1672942249 source:c:\users\renat\onedrive\documentos\github\algoritmos\calculadora_oito_bits\calculadora_oito_bits\calc.c
+1673022936 source:c:\users\renat\onedrive\documentos\github\algoritmos\calculadora_oito_bits\calculadora_oito_bits\calc.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -54,6 +54,22 @@
 	<setjmp.h>
 	<stdarg.h>
 
-1672723248 source:c:\users\renat\onedrive\documentos\github\algoritmos\calculadora_oito_bits\calculadora_oito_bits\alltests.c
-	"Arquivos_adicionais/CuTest.h"
+1673005895 source:c:\users\renat\onedrive\documentos\github\algoritmos\calculadora_oito_bits\calculadora_oito_bits\alltests.c
+	"Teste_unitario/CuTest.h"
+
+1672625240 c:\users\renat\onedrive\documentos\github\algoritmos\calculadora_oito_bits\calculadora_oito_bits\teste_unitario\cutest.h
+	<setjmp.h>
+	<stdarg.h>
+
+1672625240 source:c:\users\renat\onedrive\documentos\github\algoritmos\calculadora_oito_bits\calculadora_oito_bits\teste_unitario\cutest.c
+	<assert.h>
+	<setjmp.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<math.h>
+	"CuTest.h"
+
+1673023030 source:c:\users\renat\onedrive\documentos\github\algoritmos\calculadora_oito_bits\calculadora_oito_bits\teste_unitario\testes_calculadora.c
+	"CuTest.h"
 

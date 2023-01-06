@@ -1,23 +1,24 @@
-#include "Arquivos_adicionais/CuTest.h"
+#include "Teste_unitario/CuTest.h"
 
-CuSuite* StrUtilGetSuite();
 
-void RunAllTests(void){
-    CuString* output = CuStringNew();
-    CuSuite* suite = CuSuiteNew();
+//CuSuite* StrUtilGetSuite();
 
-    CuSuiteAddSuite(suite, StrUtilGetSuite());
-
-    CuSuiteRun(suite);
-    CuSuiteSummary(suite, output);
-    CuSuiteDetails(suite, output);
-    printf ("%s\n\n", output->buffer);
-
-}
-
-int main(void){
-    RunAllTests();
-}
+//void RunAllTests(void){
+//    CuString* output = CuStringNew();
+//    CuSuite* suite = CuSuiteNew();
+//
+//    CuSuiteAddSuite(suite, StrUtilGetSuite());
+//
+//    CuSuiteRun(suite);
+//    CuSuiteSummary(suite, output);
+//    CuSuiteDetails(suite, output);
+//    printf ("%s\n\n", output->buffer);
+//
+//}
+//
+//int main(void){
+//    RunAllTests();
+//}
 
 
 

@@ -163,7 +163,7 @@ void TesteSub4(CuTest *tc){
 char * input1 = "11111111";
 char * input2 = "10000000";
 char * actual = subtrai(input1, input2);
-char * expected = "0001111111";
+char * expected = "1101111111";
 CuAssertStrEquals (tc, expected, actual);
 }
 
@@ -171,7 +171,7 @@ void TesteSub5(CuTest *tc){
 char * input1 = "00000001";
 char * input2 = "10000000";
 char * actual = subtrai(input1, input2);
-char * expected = "0010000001";
+char * expected = "1110000001";
 CuAssertStrEquals (tc, expected, actual);
 }
 
@@ -187,7 +187,7 @@ void TesteSub7(CuTest *tc){
 char * input1 = "01111111";
 char * input2 = "10000000";
 char * actual = subtrai(input1, input2);
-char * expected = "0011111111";
+char * expected = "1111111111";
 CuAssertStrEquals (tc, expected, actual);
 }
 

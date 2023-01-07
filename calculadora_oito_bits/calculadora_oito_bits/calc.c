@@ -149,6 +149,7 @@ char * multiplica(char valor_1[], char valor_2[]){
 }
 
 char invert(char bit){
+
     if (bit == '0'){
         bit = '1';
     }else{

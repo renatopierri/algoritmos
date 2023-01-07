@@ -7,9 +7,9 @@
 	"calc.h"
 	"Teste_unitario/CuTest.h"
 
-1673010001 c:\users\renat\onedrive\documentos\github\algoritmos\calculadora_oito_bits\calculadora_oito_bits\calc.h
+1673045560 c:\users\renat\onedrive\documentos\github\algoritmos\calculadora_oito_bits\calculadora_oito_bits\calc.h
 
-1673036813 source:c:\users\renat\onedrive\documentos\github\algoritmos\calculadora_oito_bits\calculadora_oito_bits\calc.c
+1673046004 source:c:\users\renat\onedrive\documentos\github\algoritmos\calculadora_oito_bits\calculadora_oito_bits\calc.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -70,6 +70,6 @@
 	<math.h>
 	"CuTest.h"
 
-1673023030 source:c:\users\renat\onedrive\documentos\github\algoritmos\calculadora_oito_bits\calculadora_oito_bits\teste_unitario\testes_calculadora.c
+1673045723 source:c:\users\renat\onedrive\documentos\github\algoritmos\calculadora_oito_bits\calculadora_oito_bits\teste_unitario\testes_calculadora.c
 	"CuTest.h"
 

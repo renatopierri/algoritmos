@@ -18,23 +18,6 @@ void RunAllTests(void){
 }
 // Testes unitarios
 
-//Teste invert bit
-
-//void TesteInverte0(CuTest *tc){
-//
-//char * input1 = "0";
-//char * actual = invert(input1);
-//char * expected = "1";
-//CuAssertStrEquals (tc, expected, actual);
-//}
-
-//void TesteInverte1(CuTest *tc){
-//char * input1 = '1';
-//char * actual = invert(input1);
-//char * expected = '0';
-//CuAssertStrEquals (tc, expected, actual);
-//}
-
 //Testes de soma
 
 void TesteSoma1(CuTest *tc){
@@ -272,9 +255,6 @@ CuAssertStrEquals (tc, expected, actual);
 CuSuite*StrUtilGetSuite(){
     CuSuite* suite = CuSuiteNew();
 
-//  SUITE_ADD_TEST(suite,TesteInverte0);
-//  SUITE_ADD_TEST(suite,TesteInverte1);
-
     SUITE_ADD_TEST(suite,TesteSoma1);
     SUITE_ADD_TEST(suite,TesteSoma2);
     SUITE_ADD_TEST(suite,TesteSoma3);
@@ -306,8 +286,6 @@ CuSuite*StrUtilGetSuite(){
     SUITE_ADD_TEST(suite,TesteSub10);
     SUITE_ADD_TEST(suite,TesteSub11);
     SUITE_ADD_TEST(suite,TesteSub12);
-
-
 
     return suite;
 }

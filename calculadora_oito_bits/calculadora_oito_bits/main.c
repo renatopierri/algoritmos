@@ -29,14 +29,14 @@ int main(){
 int le_dado();
 int le_dado(char word[]);
 int eerro;
-int debug = 1;
+int debug = 0;
 
     if (debug == DEBUG){
   //  if (debug == OPERACAO){
         while(1){
             int erro_1=1, erro_2=1 ;
-            static char valor_1[10],
-                 valor_2[10],
+            static char valor_1[9],
+                 valor_2[9],
                  soma_resultado[11],
                  sub_resultado[11],
                  mult_resultado[11];
@@ -61,16 +61,16 @@ int debug = 1;
     //             &(soma_resultado[strlen (soma_resultado)-8]));
             printf("Resultado     = %s\n", soma_resultado);
             eerro = verifica_erro(soma_resultado);
+            printf("erro soma: %d\n\n",eerro);
 
-            printf("erro: %d\n\n",eerro);
-
-            printf("Operacao de subtracao\n");
             strcpy (sub_resultado, subtrai(valor_1, valor_2));
-    //      printf ("Resultado     = %s\n",
+            printf("Operacao de subtracao\n");
+
+     //     printf ("Resultado     = %s\n",
     //          &(sub_resultado[strlen (sub_resultado) - 8]));
-    //      printf ("Resultado     = %s\n",sub_resultado);
-    //      eerro = verifica_erro(sub_resultado);
-    //      printf("erro: %d\n\n",eerro);
+            printf ("Resultado     = %s\n",sub_resultado);
+            eerro = verifica_erro(sub_resultado);
+            printf("erro: %d\n\n",eerro);
 
     //      printf("Operacao de multiplicacao\n");
     //      strcpy(mult_resultado, multiplica(valor_1, valor_2));

@@ -34,45 +34,38 @@ int le_dado(char word[]){
 
 //void soma(char valor_1[], char valor_2[], char soma_res[]){
 char* soma(char valor_1[], char valor_2[]){
-int controle = 0;
-char v1[10],v2[10];
-static char vai_um = '0';
-static char soma_res[11];
+    int controle = 0;
+    static char v1[10],v2[10];
+    static char vai_um = '0';
+    static char soma_res[10];
 
-int tamanho = strlen (valor_1);
-if (tamanho == 8){
-    completa(v1, valor_1);
-    completa(v2, valor_2);
-}else{
+    int tamanho = strlen (valor_1);
+    if (tamanho == 8){
+        completa(v1, valor_1);
+        completa(v2, valor_2);
+    }else{
+        strcpy(v1,valor_1);
+        strcpy(v2,valor_2);
+    }
 
-strcpy(v1,valor_1);
-alinha_direita(v1,CONTA);
-strcpy(v2,valor_2);
-alinha_direita(v2,CONTA);
-}
-
-strcpy(soma_res,"ABCDEFGHIJ");
-vai_um = '0';
+    strcpy(soma_res,"ABCDEFGHIJ");
+    vai_um = '0';
 
 //Mandrakaria ativar! - Implementação do somador de oito bits com overflow:
     for (controle = 9 ; controle >= 0; controle--){
-        if (controle == 0){
-            soma_res[controle] = soma_res[1];
-        }else{
-            soma_res[controle] = (invert(v1[controle-1])&invert(v2[controle-1])&vai_um)|
-                                   (invert(v1[controle-1])&v2[controle-1]&invert(vai_um))|
-                                   (v1[controle-1]&invert(v2[controle-1])&invert(vai_um))|
-                                   (v1[controle-1]&v2[controle-1]&vai_um);
-            if(((v2[controle-1]&vai_um)|
-                (v1[controle-1]&vai_um)|
-                (v1[controle-1]&v2[controle-1]))=='1'){
+            soma_res[controle] = (invert(v1[controle])&invert(v2[controle])&vai_um)|
+                                   (invert(v1[controle])&v2[controle]&invert(vai_um))|
+                                   (v1[controle]&invert(v2[controle])&invert(vai_um))|
+                                   (v1[controle]&v2[controle]&vai_um);
+            if(((v2[controle]&vai_um)|
+                (v1[controle]&vai_um)|
+                (v1[controle]&v2[controle]))=='1'){
                 vai_um = '1';
             }else{
                 vai_um = '0';
             }
-        }
     }
-  //  vai_um = '0';
+
 //Mandrakaria desativar!
 
  return soma_res;
@@ -81,40 +74,28 @@ vai_um = '0';
 const char * compl_1(char v2[]){
     int varre;
     static char comp_1[11];
-    for(varre = 8; varre >=0; varre--){
+    for(varre = 9; varre >=0; varre--){
         comp_1[varre] = invert(v2[varre]);
     }
 return comp_1;
 }
 
 const char * compl_2(char comp_1[]){
-    char comp_2[11];
-    strcpy(comp_2,soma("000000001",comp_1));
-    char * ret = comp_2+1;
-return ret;
+    static char comp_2[11];
+    strcpy(comp_2,soma("0000000001",comp_1));
+return comp_2;
 }
 
-/*
-   1-+127
-    00000001 MENOS 01111111
-    RESULTADO ESPERADO:   110000010
-    RESULTADO ENCONTRADO: 010000010
-*/
-
 char * subtrai(char valor_1[], char valor_2[]){
-    char v1[10],v2[10];
-    static char complemento_1[10], complemento_2[11];
+    char v1[11],v2[11];
+    static char complemento_1[11], complemento_2[11];
     static char sub_res[11];
     completa(v1, valor_1);
     completa(v2, valor_2);
     sub_res[0]='0';
     strcpy (complemento_1, compl_1(v2));
     strcpy (complemento_2, compl_2(complemento_1));
-    char *ve1 = v1+1;
-    char *c2 = complemento_2+1;
-    strcpy (sub_res, soma(ve1,c2));
-   // strcpy (sub_res, soma(v1,complemento_2));
-
+    strcpy (sub_res, soma(v1,complemento_2));
  return sub_res;
 }
 
@@ -179,18 +160,18 @@ return erro;
 void completa(char saida[],char entrada[] ){
     if (entrada[0] == '1'){
         saida[0] = '1';
-       // saida[1] = '1';
+        saida[1] = '1';
     }else{
         saida[0]='0';
-       // saida[1]='0';
+        saida[1]='0';
     }
-    int controle = 1;
-    while (controle <= 9){
-        saida[controle] = entrada[controle -1];
+    int controle = 2;
+    while (controle <= 10){
+        saida[controle] = entrada[controle-2];
         controle++;
     }
 //    saida[9]='\0';
-
+return;
 }
 
 void encurta(char word[]){
@@ -214,20 +195,24 @@ void encurta(char word[]){
 void alinha_direita(char word[],int tipo){
 int tamanho_string, varre;
 tamanho_string = strlen(word);
+word[tamanho_string];
+if(tamanho_string < 8){
     tamanho_string--;
-    for(varre = 8; varre >=0; varre--){
-        if(tamanho_string >= 0){
-            word[varre] = word[tamanho_string];
-            tamanho_string --;
-        }else{
-            word[varre] = '0';
+    //strcpy(word,"ABCDEFGHIJ");
+        for(varre = 7; varre >=0; varre--){
+            if(tamanho_string >= 0){
+                word[varre] = word[tamanho_string];
+                tamanho_string --;
+            }else{
+                word[varre] = '0';
+            }
         }
-    }
-    word[9]='\0';
-    if (tipo == 1){
-        if (word[1]=='1'){word[0]='1';}
-    }else{
-        word[0]='0';
-    }
+        if(word[2]=='1'){
+          word[0] = '1';
+        }else{
+          word[0] = '0';
+        }
+}
+
 return;
 }

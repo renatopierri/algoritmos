@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "../calc.h"
 #include "CuTest.h"
 
 CuSuite* StrUtilGetSuite();
@@ -251,6 +254,48 @@ char * expected = "110000001";
 CuAssertStrEquals (tc, expected, actual);
 }
 
+void TestMult1(CuTest *tc){
+char * input1 = "00000011";
+char * input2 = "00000100";
+char * actual = multiplica(input1, input2);
+char * expected = "000001100";
+CuAssertStrEquals (tc, expected, actual);
+}
+
+void mais3__x__mais2(CuTest *tc){
+char * input1 = "00000011";
+char * input2 = "00000010";
+char * actual = multiplica(input1, input2);
+char * expected = "000000110";
+CuAssertStrEquals (tc, expected, actual);
+}
+
+void mais3__x_menos2(CuTest *tc){
+char * input1 = "00000011";
+char * input2 = "11111110";
+char * actual = multiplica(input1, input2);
+char * expected = "111111010";
+CuAssertStrEquals (tc, expected, actual);
+}
+
+void menos3_x__mais2(CuTest *tc){
+char * input1 = "11111101";
+char * input2 = "00000010";
+char * actual = multiplica(input1, input2);
+char * expected = "111111010";
+CuAssertStrEquals (tc, expected, actual);
+}
+
+void menos3_x_menos2(CuTest *tc){
+char * input1 = "11111101";
+char * input2 = "11111110";
+char * actual = multiplica(input1, input2);
+char * expected = "000000110";
+CuAssertStrEquals (tc, expected, actual);
+}
+
+
+
 
 CuSuite*StrUtilGetSuite(){
     CuSuite* suite = CuSuiteNew();
@@ -286,6 +331,12 @@ CuSuite*StrUtilGetSuite(){
     SUITE_ADD_TEST(suite,TesteSub10);
     SUITE_ADD_TEST(suite,TesteSub11);
     SUITE_ADD_TEST(suite,TesteSub12);
+
+    SUITE_ADD_TEST(suite,TestMult1);
+    SUITE_ADD_TEST(suite,mais3__x__mais2);
+    SUITE_ADD_TEST(suite,mais3__x_menos2);
+    SUITE_ADD_TEST(suite,menos3_x__mais2);
+    SUITE_ADD_TEST(suite,menos3_x_menos2);
 
     return suite;
 }

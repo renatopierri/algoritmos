@@ -39,6 +39,7 @@
 		<Unit filename="Teste_unitario/Testes_Calculadora.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="Teste_unitario/Testes_Calculadora.h" />
 		<Unit filename="calc.c">
 			<Option compilerVar="CC" />
 		</Unit>

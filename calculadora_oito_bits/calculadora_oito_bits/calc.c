@@ -4,16 +4,15 @@
 #include <windows.h>
 #include "calc.h"
 
-#define CONTA 1
-#define INTERNA  0
+#define NEGATIVO 1
 
 int le_dado(char word[]){
-    int controle, check, tamanho_string,varre;
+    int controle, check, tamanho_string;
     check = 0;
     controle = 0;
     scanf("%8s",word);
     fflush(stdin);
-    int tipo = CONTA;
+
 
 //Verifica se tem apenas "um" e "zeros"
     tamanho_string = strlen(word);
@@ -28,7 +27,7 @@ int le_dado(char word[]){
     }
 
     alinha_direita(word);
-    printf("string completa: %s\n", word);
+    printf("string completa:  %s\n", word);
     return check;
 }
 
@@ -37,7 +36,7 @@ char* soma(char valor_1[], char valor_2[]){
     int controle = 0;
     static char v1[9],v2[9];
     static char vai_um = '0';
-    static char soma_res[9];
+    static char soma_res[10];
 
     int tamanho = strlen (valor_1);
     if (tamanho == 8){
@@ -53,17 +52,17 @@ char* soma(char valor_1[], char valor_2[]){
 
 //Mandrakaria ativar! - Implementação do somador de oito bits com overflow:
     for (controle = 9 ; controle >= 0; controle--){
-            soma_res[controle] = (invert(v1[controle])&invert(v2[controle])&vai_um)|
-                                   (invert(v1[controle])&v2[controle]&invert(vai_um))|
-                                   (v1[controle]&invert(v2[controle])&invert(vai_um))|
-                                   (v1[controle]&v2[controle]&vai_um);
-            if(((v2[controle]&vai_um)|
-                (v1[controle]&vai_um)|
-                (v1[controle]&v2[controle]))=='1'){
-                vai_um = '1';
-            }else{
-                vai_um = '0';
-            }
+        soma_res[controle] = (invert(v1[controle])&invert(v2[controle])&vai_um)|
+                               (invert(v1[controle])&v2[controle]&invert(vai_um))|
+                               (v1[controle]&invert(v2[controle])&invert(vai_um))|
+                               (v1[controle]&v2[controle]&vai_um);
+        if(((v2[controle]&vai_um)|
+            (v1[controle]&vai_um)|
+            (v1[controle]&v2[controle]))=='1'){
+            vai_um = '1';
+        }else{
+            vai_um = '0';
+        }
     }
 
 //Mandrakaria desativar!
@@ -96,34 +95,54 @@ char * subtrai(char valor_1[], char valor_2[]){
     strcpy (complemento_1, compl_1(v2));
     strcpy (complemento_2, compl_2(complemento_1));
     strcpy (sub_res, soma(v1,complemento_2));
- return sub_res;
+return sub_res;
 }
 
 char * multiplica(char valor_1[], char valor_2[]){
-    static char v1[9],v2[9];
-    char sinal;
+    static char fator1[9],fator2[9],ct[9], temp[9];
     static char mult_res[10];
+    static char complemento_1[9];
+    int sinal;
 
-    strcpy (v1, valor_1);
-    strcpy (v2, valor_2);
-    sinal = v2[0];
+
+    strcpy (fator1, valor_1);
+    strcpy (fator2, valor_2);
+    strcpy (ct, valor_2);
+//    char sinal = v2[0];
 
     strcpy(mult_res,"000000000");
-    if(v2[0] == '1'){
-        while((v2[0]|v2[1]|v2[2]|v2[3]|v2[4]|v2[5]|v2[6]|v2[7])!='0'){
-            memcpy(mult_res,&((soma(mult_res,v1)))[1],9);
-            memcpy(v2,&(soma(v2,"00000001"))[1],9);
+    strcpy(temp,"00000000");
+    if(ct[0] == '1'){
+        while((ct[0]|ct[1]|ct[2]|ct[3]|ct[4]|ct[5]|ct[6]|ct[7])!='0'){
+            strcpy(temp,(soma(temp,fator1))+1);
+            strcpy(ct,((soma(ct,"00000001"))+1));
         }
     }else{
-        while((v2[0]|v2[1]|v2[2]|v2[3]|v2[4]|v2[5]|v2[6]|v2[7]|v2[8])!='0'){
-            memcpy(mult_res,&((soma(mult_res,v1)))[1],9);
-            memcpy(v2,&(subtrai(v2,"00000001"))[1],9);
+        while((ct[0]|ct[1]|ct[2]|ct[3]|ct[4]|ct[5]|ct[6]|ct[7]|ct[8])!='0'){
+            strcpy(temp,(soma(temp,fator1))+1);
+            strcpy(ct,((subtrai(ct,"00000001"))+1));
         }
     }
+    sinal = verifica_sinal(fator1[0], fator2[0]);
+    if((sinal == NEGATIVO)||(temp[0]=='1')){
+        char f1 = invert(fator1[0]);
+        char f2 = fator2[0];
+        if((f1=='1')&(f2=='1')||(f1=='0')&(f2=='1')){
+            strcpy (complemento_1, compl_1(temp));
+            complemento_1[8]='\0';
+            completa(temp,complemento_1);
+            strcpy (mult_res, compl_2(temp));
+        }else{
+            completa(mult_res,temp);
+        }
+
+    }else{
+        completa(mult_res,temp);
+    }
+return mult_res;
 }
 
 char invert(char bit){
-
     if (bit == '0'){
         bit = '1';
     }else{
@@ -142,6 +161,19 @@ int verifica_erro(char res[]){
     char i_res_1 = invert(res[1]);
 
     if(((i_res_0&res_1)|(res_0&i_res_1))=='1'){
+        erro = 1;
+        }else{
+        erro=0;
+    }
+return erro;
+}
+
+int verifica_sinal(char fator1, char fator2){
+    int erro = 1;
+    char i_fator1 = invert(fator1);
+    char i_fator2 = invert(fator2);
+
+    if(((i_fator1&fator2)|(fator1&i_fator2))=='1'){
         erro = 1;
         }else{
         erro=0;
@@ -184,21 +216,19 @@ void encurta(char word[]){
 }
 
 void alinha_direita(char word[]){
-int tamanho_string, varre;
-tamanho_string = strlen(word);
-word[tamanho_string];
-if(tamanho_string < 8){
-    tamanho_string--;
-        for(varre = 7; varre >=0; varre--){
-            if(tamanho_string >= 0){
-                word[varre] = word[tamanho_string];
-                tamanho_string --;
-            }else{
-                word[varre] = '0';
+    int tamanho_string, varre;
+    tamanho_string = strlen(word);
+    if(tamanho_string < 8){
+        tamanho_string--;
+            for(varre = 7; varre >=0; varre--){
+                if(tamanho_string >= 0){
+                    word[varre] = word[tamanho_string];
+                    tamanho_string --;
+                }else{
+                    word[varre] = '0';
+                }
             }
-        }
-
-}
+    }
 
 return;
 }

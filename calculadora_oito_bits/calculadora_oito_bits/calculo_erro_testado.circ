@@ -106,4 +106,40 @@
     <wire from="(400,60)" to="(400,160)"/>
     <wire from="(400,60)" to="(420,60)"/>
   </circuit>
+  <circuit name="overflow">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="overflow"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(130,120)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="sr_2"/>
+    </comp>
+    <comp lib="0" loc="(130,60)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="v2_1"/>
+    </comp>
+    <comp lib="0" loc="(130,90)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="c2_1"/>
+    </comp>
+    <comp lib="0" loc="(390,60)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="reseta"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(350,180)" name="AND Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <wire from="(130,60)" to="(140,60)"/>
+    <wire from="(130,90)" to="(150,90)"/>
+    <wire from="(140,170)" to="(320,170)"/>
+    <wire from="(140,60)" to="(140,170)"/>
+    <wire from="(150,190)" to="(320,190)"/>
+    <wire from="(150,90)" to="(150,190)"/>
+    <wire from="(350,180)" to="(370,180)"/>
+    <wire from="(370,60)" to="(370,180)"/>
+    <wire from="(370,60)" to="(390,60)"/>
+  </circuit>
 </project>

@@ -29,17 +29,16 @@ int main(){
 int le_dado();
 int le_dado(char word[]);
 int eerro;
-int debug = 0;
+int erro_1=1, erro_2=1;
+static char valor_1[9],
+            valor_2[9],
+            soma_resultado[10],
+            sub_resultado[10],
+            mult_resultado[10];
 
-    if (debug == DEBUG){
-  //  if (debug == OPERACAO){
+//  DEBUG == 1: Debug | DEBUG == 0: Operacao normal
+    if (DEBUG == 0){
         while(1){
-            int erro_1=1, erro_2=1 ;
-            static char valor_1[9],
-                 valor_2[9],
-                 soma_resultado[11],
-                 sub_resultado[11],
-                 mult_resultado[11];
             while(erro_1 == 1||erro_2 == 1){
                 printf("digite o primeiro valor binario de ate 8 bits\n");
                 erro_1 = le_dado(valor_1);
@@ -57,18 +56,16 @@ int debug = 0;
             printf("Resultados validos entre -128 ate +127 - 10000000 ate 01111111\n\n");
             strcpy(soma_resultado,soma(valor_1, valor_2));
             printf ("Operacao de soma\n");
-    //      printf("Resultado     = %s\n",
-    //             &(soma_resultado[strlen (soma_resultado)-8]));
-            printf("Resultado     = %s\n", soma_resultado);
+            printf("Resultado     = %s\n",
+                   &(soma_resultado[strlen (soma_resultado)-8]));
             eerro = verifica_erro(soma_resultado);
             printf("erro soma: %d\n\n",eerro);
 
             strcpy (sub_resultado, subtrai(valor_1, valor_2));
             printf("Operacao de subtracao\n");
 
-     //     printf ("Resultado     = %s\n",
-    //          &(sub_resultado[strlen (sub_resultado) - 8]));
-            printf ("Resultado     = %s\n",sub_resultado);
+            printf ("Resultado     = %s\n",
+                    &(sub_resultado[strlen (sub_resultado) - 8]));
             eerro = verifica_erro(sub_resultado);
             printf("erro: %d\n\n",eerro);
 
@@ -82,6 +79,7 @@ int debug = 0;
 
             system("pause");
             system("cls");
+            erro_1=1;
         }
     }else{
         RunAllTests();

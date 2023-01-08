@@ -27,7 +27,7 @@ int le_dado(char word[]){
         }
     }
 
-    alinha_direita(word,tipo);
+    alinha_direita(word);
     printf("string completa: %s\n", word);
     return check;
 }
@@ -35,9 +35,9 @@ int le_dado(char word[]){
 //void soma(char valor_1[], char valor_2[], char soma_res[]){
 char* soma(char valor_1[], char valor_2[]){
     int controle = 0;
-    static char v1[10],v2[10];
+    static char v1[9],v2[9];
     static char vai_um = '0';
-    static char soma_res[10];
+    static char soma_res[9];
 
     int tamanho = strlen (valor_1);
     if (tamanho == 8){
@@ -48,7 +48,7 @@ char* soma(char valor_1[], char valor_2[]){
         strcpy(v2,valor_2);
     }
 
-    strcpy(soma_res,"ABCDEFGHIJ");
+    strcpy(soma_res,"ABCDEFGHI");
     vai_um = '0';
 
 //Mandrakaria ativar! - Implementação do somador de oito bits com overflow:
@@ -67,29 +67,29 @@ char* soma(char valor_1[], char valor_2[]){
     }
 
 //Mandrakaria desativar!
-
+soma_res[9]='\0';
  return soma_res;
 }
 
 const char * compl_1(char v2[]){
     int varre;
-    static char comp_1[11];
-    for(varre = 9; varre >=0; varre--){
+    static char comp_1[9];
+    for(varre = 8; varre >=0; varre--){
         comp_1[varre] = invert(v2[varre]);
     }
 return comp_1;
 }
 
 const char * compl_2(char comp_1[]){
-    static char comp_2[11];
-    strcpy(comp_2,soma("0000000001",comp_1));
+    static char comp_2[9];
+    strcpy(comp_2,soma("000000001",comp_1));
 return comp_2;
 }
 
 char * subtrai(char valor_1[], char valor_2[]){
-    char v1[11],v2[11];
-    static char complemento_1[11], complemento_2[11];
-    static char sub_res[11];
+    static char v1[9],v2[9];
+    static char complemento_1[9], complemento_2[9];
+    static char sub_res[9];
     completa(v1, valor_1);
     completa(v2, valor_2);
     sub_res[0]='0';
@@ -120,13 +120,6 @@ char * multiplica(char valor_1[], char valor_2[]){
             memcpy(v2,&(subtrai(v2,"00000001"))[1],9);
         }
     }
-
-////Aplicando a regra do sinal
-//  if (sinal == '1'){
-//    strcpy (mult_res, compl_1(mult_res));
-//    strcpy (mult_res, compl_2(mult_res));
-//  }
-//return mult_res;
 }
 
 char invert(char bit){
@@ -143,10 +136,10 @@ return bit;
 
 int verifica_erro(char res[]){
     int erro = 1;
-    char res_0 = res[1];
-    char res_1 = res[2];
-    char i_res_0 = invert(res[1]);
-    char i_res_1 = invert(res[2]);
+    char res_0 = res[0];
+    char res_1 = res[1];
+    char i_res_0 = invert(res[0]);
+    char i_res_1 = invert(res[1]);
 
     if(((i_res_0&res_1)|(res_0&i_res_1))=='1'){
         erro = 1;
@@ -160,14 +153,12 @@ return erro;
 void completa(char saida[],char entrada[] ){
     if (entrada[0] == '1'){
         saida[0] = '1';
-        saida[1] = '1';
     }else{
         saida[0]='0';
-        saida[1]='0';
     }
-    int controle = 2;
-    while (controle <= 10){
-        saida[controle] = entrada[controle-2];
+    int controle = 1;
+    while (controle <= 9){
+        saida[controle] = entrada[controle-1];
         controle++;
     }
 //    saida[9]='\0';
@@ -192,13 +183,12 @@ void encurta(char word[]){
     return;
 }
 
-void alinha_direita(char word[],int tipo){
+void alinha_direita(char word[]){
 int tamanho_string, varre;
 tamanho_string = strlen(word);
 word[tamanho_string];
 if(tamanho_string < 8){
     tamanho_string--;
-    //strcpy(word,"ABCDEFGHIJ");
         for(varre = 7; varre >=0; varre--){
             if(tamanho_string >= 0){
                 word[varre] = word[tamanho_string];
@@ -207,11 +197,7 @@ if(tamanho_string < 8){
                 word[varre] = '0';
             }
         }
-        if(word[2]=='1'){
-          word[0] = '1';
-        }else{
-          word[0] = '0';
-        }
+
 }
 
 return;

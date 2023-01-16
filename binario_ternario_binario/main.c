@@ -24,7 +24,7 @@ int main()
     int debug;
     int check1,check2=1;
 
-    char entrada_binaria[9]="'\0','\0','\0','\0','\0','\0','\0','\0','\0'";
+    char entrada_binaria[9];
     char result_ternario[7];
 
     char entrada_ternaria[7];

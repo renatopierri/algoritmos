@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1673903114 source:c:\users\renat\onedrive\documentos\github\algoritmos\binario_ternario_binario\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funcoes.h"
+	"Teste_unitario/CuTest.h"
+	"Teste_unitario/Testes_bin_3_bin.h"
+
+1673838464 c:\users\renat\onedrive\documentos\github\algoritmos\binario_ternario_binario\funcoes.h
+
+1673902369 source:c:\users\renat\onedrive\documentos\github\algoritmos\binario_ternario_binario\funcoes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"funcoes.h"
+
+1672625240 c:\users\renat\onedrive\documentos\github\algoritmos\binario_ternario_binario\teste_unitario\cutest.h
+	<setjmp.h>
+	<stdarg.h>
+
+1673203148 c:\users\renat\onedrive\documentos\github\algoritmos\binario_ternario_binario\teste_unitario\testes_bin_3_bin.h
+
+1672625240 source:c:\users\renat\onedrive\documentos\github\algoritmos\binario_ternario_binario\teste_unitario\cutest.c
+	<assert.h>
+	<setjmp.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<math.h>
+	"CuTest.h"
+
+1673903077 source:c:\users\renat\onedrive\documentos\github\algoritmos\binario_ternario_binario\teste_unitario\testes_bin_3_bin.c
+	<stdio.h>
+	<stdlib.h>
+	"../funcoes.h"
+	"CuTest.h"
+

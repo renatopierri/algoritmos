@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1673903114 source:c:\users\renat\onedrive\documentos\github\algoritmos\binario_ternario_binario\main.c
+1673912472 source:c:\users\renat\onedrive\documentos\github\algoritmos\binario_ternario_binario\main.c
 	<stdio.h>
 	<stdlib.h>
 	"funcoes.h"
@@ -8,7 +8,7 @@
 
 1673838464 c:\users\renat\onedrive\documentos\github\algoritmos\binario_ternario_binario\funcoes.h
 
-1673902369 source:c:\users\renat\onedrive\documentos\github\algoritmos\binario_ternario_binario\funcoes.c
+1673911573 source:c:\users\renat\onedrive\documentos\github\algoritmos\binario_ternario_binario\funcoes.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -19,7 +19,7 @@
 	<setjmp.h>
 	<stdarg.h>
 
-1673203148 c:\users\renat\onedrive\documentos\github\algoritmos\binario_ternario_binario\teste_unitario\testes_bin_3_bin.h
+1673912504 c:\users\renat\onedrive\documentos\github\algoritmos\binario_ternario_binario\teste_unitario\testes_bin_3_bin.h
 
 1672625240 source:c:\users\renat\onedrive\documentos\github\algoritmos\binario_ternario_binario\teste_unitario\cutest.c
 	<assert.h>
@@ -30,7 +30,7 @@
 	<math.h>
 	"CuTest.h"
 
-1673903077 source:c:\users\renat\onedrive\documentos\github\algoritmos\binario_ternario_binario\teste_unitario\testes_bin_3_bin.c
+1673911727 source:c:\users\renat\onedrive\documentos\github\algoritmos\binario_ternario_binario\teste_unitario\testes_bin_3_bin.c
 	<stdio.h>
 	<stdlib.h>
 	"../funcoes.h"

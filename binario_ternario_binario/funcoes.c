@@ -130,7 +130,3 @@ void alinha_direita(char entrada[],int tipo){
 
 return;
 }
-
-
-
-

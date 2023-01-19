@@ -11,7 +11,7 @@ mesmo numero em notacao ternaria (veja o exercicio anterior). Escreva outro pro
 grama C para ler um numero ternario e imprimir o equivalente em notacao binaria
 
 Fonte: Tenembaum, Estrutura de dados usando C, ex 1.1.7, pg33.
-Autor da soulucao: Renato de Pierri - nets-nuts.com.br
+Autor da soulucao: Renato de Pierri - https://nets-nuts.com.br/conversor-binario-ternario-binario/
 */
 
 //Suite de testes

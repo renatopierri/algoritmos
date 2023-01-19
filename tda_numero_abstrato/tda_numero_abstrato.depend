@@ -1,0 +1,54 @@
+# depslib dependency file v1.0
+1674147633 source:c:\users\renat\onedrive\documentos\github\algoritmos\tda_numero_abstrato\main.c
+	<stdio.h>
+	<stdlib.h>
+	"tda_nr_abstrato.h"
+	"Teste_unitario/teste_tda_nr_abstrato.h"
+	"funcoes.h"
+
+1674147482 c:\users\renat\onedrive\documentos\github\algoritmos\tda_numero_abstrato\tda_nr_abstrato.h
+	<stdio.h>
+	<stdlib.h>
+
+1672625240 source:c:\users\renat\onedrive\documentos\github\algoritmos\tda_numero_abstrato\teste_unitario\cutest.c
+	<assert.h>
+	<setjmp.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<math.h>
+	"CuTest.h"
+
+1672625240 c:\users\renat\onedrive\documentos\github\algoritmos\tda_numero_abstrato\teste_unitario\cutest.h
+	<setjmp.h>
+	<stdarg.h>
+
+1674146706 source:c:\users\renat\onedrive\documentos\github\algoritmos\tda_numero_abstrato\teste_unitario\teste_tda_nr_abstrato.c
+	<stdio.h>
+	<stdlib.h>
+	"teste_tda_nr_abstrato.h"
+	"../tda_nr_abstrato.h"
+	"CuTest.h"
+	"string.h"
+
+1674147591 source:c:\users\renat\onedrive\documentos\github\algoritmos\tda_numero_abstrato\tda_nr_abstrato.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"tda_nr_abstrato.h"
+	"Teste_unitario/teste_tda_nr_abstrato.h"
+
+1674146861 c:\users\renat\onedrive\documentos\github\algoritmos\tda_numero_abstrato\teste_unitario\teste_tda_nr_abstrato.h
+	"CuTest.h"
+
+1674086510 source:c:\users\renat\onedrive\documentos\github\algoritmos\tda_numero_abstrato\funcoes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"funcoes.h"
+
+1674086510 c:\users\renat\onedrive\documentos\github\algoritmos\tda_numero_abstrato\funcoes.h
+	"tda_nr_abstrato.h"
+

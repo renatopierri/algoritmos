@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1674257568 source:c:\users\renat\onedrive\documentos\github\algoritmos\tenembaum_mediana_1_2_1_a\funcoes.c
+	"Teste_unitario/Teste_Mediana_121a.h"
+	"Teste_unitario/CuTest.h"
+	"funcoes.h"
+
+1674258753 c:\users\renat\onedrive\documentos\github\algoritmos\tenembaum_mediana_1_2_1_a\teste_unitario\teste_mediana_121a.h
+	"CuTest.h"
+
+1672625240 c:\users\renat\onedrive\documentos\github\algoritmos\tenembaum_mediana_1_2_1_a\teste_unitario\cutest.h
+	<setjmp.h>
+	<stdarg.h>
+
+1674257568 c:\users\renat\onedrive\documentos\github\algoritmos\tenembaum_mediana_1_2_1_a\funcoes.h
+
+1672625240 source:c:\users\renat\onedrive\documentos\github\algoritmos\tenembaum_mediana_1_2_1_a\teste_unitario\cutest.c
+	<assert.h>
+	<setjmp.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<math.h>
+	"CuTest.h"
+
+1674258753 source:c:\users\renat\onedrive\documentos\github\algoritmos\tenembaum_mediana_1_2_1_a\teste_unitario\teste_mediana_121a.c
+	"Teste_Mediana_121a.h"
+	"CuTest.h"
+

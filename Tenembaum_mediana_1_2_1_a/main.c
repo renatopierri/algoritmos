@@ -17,7 +17,7 @@ números e retorne a mediana dos números no vetor.
 Fonte: Estruturas de Dados Usando C - Tenembaum, pg53.
 
 Autor da solução: Renato de Pierri
-nets-nuts.com.br
+https://nets-nuts.com.br/calculando-a-mediana-tenembaum-1-2-1-a/
 
 Para simplificar a solução, ao inves de inserir os valores no array, optei  por
 gerar automaticamente os valores do array.

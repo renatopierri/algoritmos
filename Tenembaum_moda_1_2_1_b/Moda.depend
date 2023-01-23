@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1674513040 source:c:\users\renat\onedrive\documentos\github\algoritmos\tenembaum_moda_1_2_1_b\funcoes.c
+	<stdlib.h>
+	"funcoes.h"
+	"Teste_unitario/CuTest.h"
+	"Teste_unitario/Teste_Moda_121b.h"
+
+1674512984 source:c:\users\renat\onedrive\documentos\github\algoritmos\tenembaum_moda_1_2_1_b\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funcoes.h"
+	"Teste_unitario/Teste_Moda_121b.h"
+
+1674513060 c:\users\renat\onedrive\documentos\github\algoritmos\tenembaum_moda_1_2_1_b\funcoes.h
+
+1674510366 c:\users\renat\onedrive\documentos\github\algoritmos\tenembaum_moda_1_2_1_b\teste_unitario\teste_moda_121b.h
+	"../funcoes.h"
+	"CuTest.h"
+
+1672625240 c:\users\renat\onedrive\documentos\github\algoritmos\tenembaum_moda_1_2_1_b\teste_unitario\cutest.h
+	<setjmp.h>
+	<stdarg.h>
+
+1672625240 source:c:\users\renat\onedrive\documentos\github\algoritmos\tenembaum_moda_1_2_1_b\teste_unitario\cutest.c
+	<assert.h>
+	<setjmp.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<math.h>
+	"CuTest.h"
+
+1674512464 source:c:\users\renat\onedrive\documentos\github\algoritmos\tenembaum_moda_1_2_1_b\teste_unitario\teste_moda_121b.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Teste_Moda_121b.h"
+	"../funcoes.h"
+

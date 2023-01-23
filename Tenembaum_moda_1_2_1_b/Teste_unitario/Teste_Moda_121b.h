@@ -10,5 +10,6 @@ void RunAllTests(void);
 void Teste_Gera_Aleatorio(CuTest *tc);
 void Teste_Zera_Valores(CuTest *tc);
 void Teste_Calcula_Moda(CuTest *tc);
+void Teste_Calcula_Moda_Erro(CuTest *tc);
 
 #endif // TESTE_MODA_121B_H_INCLUDED

@@ -35,10 +35,9 @@ CONTINUO:   0 - Roda uma vez,    1 - Modo continuo.
 
 int main(){
 
-    int limite;
-    int tamanho_valores;
+    int limite, tamanho_valores, moda = 0;
     int valores[QUANTIDADE]={0};
-    int moda;
+    moda--;
     limite = QUANTIDADE - 1;
     tamanho_valores = sizeof(valores)/sizeof(int);
     do{

@@ -2,6 +2,8 @@
 #define FUNCOES_C_INCLUDED
 
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 #include "funcoes.h"
 #include "Teste_unitario/CuTest.h"
 #include "Teste_unitario/Teste_Moda_121b.h"
@@ -67,6 +69,4 @@ int calcula_moda(int valores[],int limite){
     system("cls");
     return  moda;
 }
-
-
 #endif // FUNCOES_C_INCLUDED

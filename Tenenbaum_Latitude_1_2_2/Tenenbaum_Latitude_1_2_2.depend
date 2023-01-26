@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1674648928 source:c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_latitude_1_2_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funcoes.h"
+	"Teste_unitario/Teste_Latitude_122.h"
+
+1674703810 c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_latitude_1_2_2\funcoes.h
+
+1674648538 c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_latitude_1_2_2\teste_unitario\teste_latitude_122.h
+	"../funcoes.h"
+	"CuTest.h"
+
+1672625240 c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_latitude_1_2_2\teste_unitario\cutest.h
+	<setjmp.h>
+	<stdarg.h>
+
+1672625240 source:c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_latitude_1_2_2\teste_unitario\cutest.c
+	<assert.h>
+	<setjmp.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<math.h>
+	"CuTest.h"
+
+1674648538 source:c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_latitude_1_2_2\funcoes.c
+	"funcoes.h"
+	"Teste_unitario/CuTest.h"
+	"Teste_unitario/Teste_Latitude_122.h"
+
+1674648538 source:c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_latitude_1_2_2\teste_unitario\teste_latitude_122.c
+	"Teste_Latitude_122.h"
+	"../funcoes.h"
+

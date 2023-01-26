@@ -6,14 +6,14 @@
 /*
 Exercício 1.2.1 b.
 A MODA de um vetor de números é o número m no vetor que é  repetido  com  maior
-freqüência. Se mais de um número for repetido com freqüência máxima igual,  não
+frequencia. Se mais de um número for repetido com freqüência máxima igual,  não
 existirá uma moda. Escreva uma função em C que aceite um  vetor  de  números  e
 retorne a moda ou uma indicação de que a moda não existe.
 
 Fonte: Estruturas de Dados Usando C - Tenembaum, pg53 - 54.
 
 Autor da solução: Renato de Pierri
-https://nets-nuts.com.br
+https://nets-nuts.com.br/notas-de-aulas/calculando-moda-tenembaum-1-2-1-b/
 
 Para simplificar, ao inves de inserir manualmente os valores no array optei por
 gerar automaticamente os valores do array.

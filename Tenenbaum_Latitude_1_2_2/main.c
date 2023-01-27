@@ -36,11 +36,21 @@ https://nets-nuts.com.br
 int main(){
 
     int limite = 0;
+    static double vlat[36]= {[0 ... 35]=99};
+    static double vtemp[36]={[0 ... 35]=99};
+    tipo_lat_temp lat_temp = Lat_temp_new();
+    insere_lat_temp(lat_temp,2.3,4.7,0);
+    destroi_lat_temp(lat_temp);
+    int controle;
 
     do{
         if(DEBUG == 0){
             printf("Rodando normal\n");
-            le_dados(ARQUIVO);
+            le_dados(vlat,vtemp);
+        for(controle = 0;controle<36;controle++){
+            printf("Latituda: %.1lf\t| Temperatura: %.2lf\n",
+            vlat[controle],vtemp[controle]);
+        }
             system("pause");
             system("cls");
         }else{

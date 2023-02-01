@@ -35,22 +35,28 @@ https://nets-nuts.com.br
 
 int main(){
 
-    int limite = 0;
-    static double vlat[36]= {[0 ... 35]=99};
-    static double vtemp[36]={[0 ... 35]=99};
-    tipo_lat_temp lat_temp = Lat_temp_new();
-    insere_lat_temp(lat_temp,2.3,4.7,0);
-    destroi_lat_temp(lat_temp);
-    int controle;
+    double vlat[36]= {[0 ... 35]=99};
+    double vtemp[36]={[0 ... 35]=99};
+    int controle, erro,result = 0;
+    int check = 0;
+    size_t tamanho;
 
     do{
         if(DEBUG == 0){
-            printf("Rodando normal\n");
-            le_dados(vlat,vtemp);
-        for(controle = 0;controle<36;controle++){
-            printf("Latituda: %.1lf\t| Temperatura: %.2lf\n",
-            vlat[controle],vtemp[controle]);
-        }
+            check = le_dados(vlat,vtemp);
+            if (check == 0){
+                tamanho = sizeof(vlat)/sizeof(vlat[0]);
+                classifica_dados(vlat,vtemp,tamanho);
+                erro = remove_inconsistencias(vlat,vtemp,tamanho);
+                if (erro >= 51){
+                    printf("\nErro irrecuperavel: %i, digitar "
+                           "novamente os dados.\n\n",erro);
+                    print_erro(erro);
+                }else{
+                    print_erro(erro);
+                    result = calcula_media(vlat,vtemp,tamanho);
+                }
+            }
             system("pause");
             system("cls");
         }else{
@@ -62,3 +68,4 @@ int main(){
     }while(CONTINUO == 1);
     return 0;
 }
+

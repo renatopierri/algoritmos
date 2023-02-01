@@ -12,13 +12,10 @@ AUTOMATICO  0 - Insere manual    1 - Insere dados automaticamente
 #define CONTINUO 1
 #define AUTOMATICO 1
 
-
-
-typedef struct Lat_temp *tipo_lat_temp;
-//Conjunto de operacoes permitidas para o tipo_lat_temp.
-extern size_t obj_size(struct Lat_temp *);
-extern void insere_lat_temp(struct Lat_temp *,double,double,int);
-extern void destroi_lat_temp(struct Lat_temp *);
-
-void le_dados(double vlat[], double vtemp[]);
+int le_dados(double vlat[], double vtemp[]);
+void classifica_dados(double vlat[], double vtemp[], size_t tamanho);
+int compare(const void *pp0, const void *pp1);
+int remove_inconsistencias(double vlat[], double vtemp[], size_t tamanho);
+int calcula_media(double vlat[],double vtemp[],size_t tamanho);
+int print_erro(int erro);
 #endif // FUNCOES_H_INCLUDED

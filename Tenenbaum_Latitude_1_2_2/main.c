@@ -26,10 +26,13 @@ ignorada, ao determinar o hemisfério mais quente.)
 Fonte da latitude x temperatura:
 https://crudata.uea.ac.uk/cru/data/temperature/
 
+Base do algoritmo de classificacao de dois arrays:
+https://stackoverflow.com/questions/32948281/c-sort-two-arrays-the-same-way
+
 Fonte: Estruturas de Dados Usando C - Tenembaum, pg 54.
 
 Autor da solução: Renato de Pierri
-https://nets-nuts.com.br
+https://nets-nuts.com.br/latitude-x-temperatura-tenenbaum-1-2-2/
 
 */
 

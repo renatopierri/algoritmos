@@ -32,7 +32,7 @@ https://stackoverflow.com/questions/32948281/c-sort-two-arrays-the-same-way
 Fonte: Estruturas de Dados Usando C - Tenembaum, pg 54.
 
 Autor da solução: Renato de Pierri
-https://nets-nuts.com.br/latitude-x-temperatura-tenenbaum-1-2-2/
+https://bit.ly/3Yj7WxI
 
 */
 

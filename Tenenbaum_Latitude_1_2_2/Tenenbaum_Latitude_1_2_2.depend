@@ -5,7 +5,7 @@
 	"funcoes.h"
 	"Teste_unitario/Teste_Latitude_122.h"
 
-1675294337 c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_latitude_1_2_2\funcoes.h
+1675302051 c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_latitude_1_2_2\funcoes.h
 	<stdio.h>
 
 1675281243 c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_latitude_1_2_2\teste_unitario\teste_latitude_122.h
@@ -25,7 +25,7 @@
 	<math.h>
 	"CuTest.h"
 
-1675292660 source:c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_latitude_1_2_2\funcoes.c
+1675294820 source:c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_latitude_1_2_2\funcoes.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -33,7 +33,7 @@
 	"Teste_unitario/CuTest.h"
 	"Teste_unitario/Teste_Latitude_122.h"
 
-1675294313 source:c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_latitude_1_2_2\teste_unitario\teste_latitude_122.c
+1675301998 source:c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_latitude_1_2_2\teste_unitario\teste_latitude_122.c
 	"Teste_Latitude_122.h"
 	"../funcoes.h"
 	<string.h>

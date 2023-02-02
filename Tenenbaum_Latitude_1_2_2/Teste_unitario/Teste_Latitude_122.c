@@ -293,9 +293,7 @@ CuSuite*StrUtilGetSuite(){
     CuSuite* suite = CuSuiteNew();
 
     SUITE_ADD_TEST(suite,Teste_Le_Dados_automatico);
-    if(AUTOMATICO == 0){
-        SUITE_ADD_TEST(suite,Teste_Le_Dados_manual);
-    }
+    SUITE_ADD_TEST(suite,Teste_Le_Dados_manual);
     SUITE_ADD_TEST(suite, Teste_Classifica_Dados);
     SUITE_ADD_TEST(suite,Teste_Remove_Inconsistencias1);
     SUITE_ADD_TEST(suite,Teste_Remove_Inconsistencias2);

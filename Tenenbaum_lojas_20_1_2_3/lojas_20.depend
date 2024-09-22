@@ -1,0 +1,62 @@
+# depslib dependency file v1.0
+1672625240 source:c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_lojas_20_1_2_3\teste_unitario\cutest.c
+	<assert.h>
+	<setjmp.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<math.h>
+	"CuTest.h"
+
+1672625240 c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_lojas_20_1_2_3\teste_unitario\cutest.h
+	<setjmp.h>
+	<stdarg.h>
+
+1675780774 source:c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_lojas_20_1_2_3\teste_unitario\testemediana.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"TesteMediana.h"
+	"../funcoes.h"
+
+1675824504 source:c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_lojas_20_1_2_3\funcoes.c
+	"Teste_unitario/TesteLojas20.h"
+	"Teste_unitario/CuTest.h"
+	"funcoes.h"
+
+1675780873 c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_lojas_20_1_2_3\teste_unitario\testemediana.h
+	"../funcoes.h"
+	"CuTest.h"
+
+1676210412 c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_lojas_20_1_2_3\funcoes.h
+
+1675867239 source:c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_lojas_20_1_2_3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Teste_unitario/TesteLojas20.h"
+	"Teste_unitario/CuTest.h"
+	"funcoes.h"
+	"telas.h"
+
+1675867225 c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_lojas_20_1_2_3\telas.h
+
+1675868542 source:c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_lojas_20_1_2_3\telas.c
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<windows.h>
+	"telas.h"
+	"funcoes.h"
+
+1675818590 source:c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_lojas_20_1_2_3\teste_unitario\testelojas20.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"TesteLojas20.h"
+	"../funcoes.h"
+	"../telas.h"
+
+1675814926 c:\users\renat\onedrive\documentos\github\algoritmos\tenenbaum_lojas_20_1_2_3\teste_unitario\testelojas20.h
+	"../funcoes.h"
+	"CuTest.h"
+
